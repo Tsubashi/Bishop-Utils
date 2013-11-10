@@ -1,0 +1,78 @@
+#left {
+}
+#right {
+  position: absolute;
+  right: 0px;
+  padding: 5px;
+  background: white;
+  border: 2px solid;
+  border-right: none;
+  border-radius: 15px;
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.orgDiv {
+  border: 5px solid;
+  border-radius: 15px;
+  margin: 5px;
+  page-break-inside: avoid;
+  page-break-after: always;
+}
+
+.orgDiv h1 {
+  border: 2px solid;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
+  padding: 2px;
+  text-align: center;
+  width:80%;
+  margin: -5px 10% 5px;
+}
+
+.calling {
+  border: 5px solid;
+  margin: 5px 1%;
+  padding: 5px;
+  float: left;
+  width: 15%;
+  height: 100px;
+  page-break-inside: avoid;
+}
+
+.calling h1 {
+  
+  text-align: center;
+  font-size: 8pt;
+}
+
+.calling p {
+  margin : 0px;
+  padding : 0px;
+  font-size: 11pt;
+}
+
+.lengthOkay {
+  border-color: green;
+} 
+
+.lengthWarn {
+  border-color: yellow;
+}
+
+.lengthUnfilled {
+  border-color: red;
+  color: red;
+  text-align: center;
+}
+
+.setApart {
+  color: green;
+}
+
+.notSetApart {
+  color: red;
+}

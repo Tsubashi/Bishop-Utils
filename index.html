@@ -5,35 +5,20 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>{% block title %}Ward Callings{% endblock %}</title>
+<title>Ward Callings</title>
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css">
 <link href="/inc/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/inc/css/print.css" rel="stylesheet" type="text/css" media="print" />
 </head>
 <body>
 <div id="wrapper">
-  <div id="right">
-    {% block navlist %}
-    <ul id="navlist">
-      <li><a href="#Bishopric">Bishopric</a></li>
-      <li><a href="#HighPriests">High Priests</a></li>
-    </ul>
-    {% endblock %}
-  </div>
-  <div id="left">
-    {% block content %}
-    <a id="Organization"></a>
-    <div class="orgDiv">
-      <h1>Organization</h1>
-      <div class="calling lengthOkay">
-        <h1>Calling</h1>
-        <p class="name">Name</p>
-        <p class="sustained">Sustained: dd/mm/yyyy</p>
-        <p class="setApart">Set Apart</p>
-      </div>
-      <div class="clear"></div>
-    </div>
-    {% endblock %}
+  <div id="content">
+   <h1>Bishop's Utilities</h1>
+   <p>A list of visualization tools & report generators</p>
+   <ul>
+    <li><a href="callings.php">Calling Visualizer</a></li>
+    <li><a href="radar.php">Bishop's Radar</a></li>
+   </ul>
   </div>
   <div class="clear"></div>
 </div>

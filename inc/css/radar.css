@@ -1,0 +1,76 @@
+#right {
+  display: block;
+  border: 2px solid;
+  margin: 0 5px;
+  padding: 10px;
+}
+
+#radarLogo {
+  background: url("/inc/img/radar_small.png");
+  width: 60px;
+  height: 64px;
+  float: left;
+}
+
+#radarTitle {
+  padding: 20px 0 0 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid #999;
+  clear: both;
+}
+
+#list li {
+  list-style: none;
+}
+
+.itemType {
+  font-weight: bold; 
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+
+.itemDate {
+  display: inline-block;
+  width: 90px;
+}
+
+.itemName {
+  
+}
+
+.type_Baptism {
+  color: blue;
+}
+
+.type_12_Yr_Adv, .type_14_Yr_Adv, .type_16_Yr_Adv {
+  color: orange;
+}
+
+.type_Month {
+  border-top: 1px dashed #999;
+  color: grey;
+}
+
+.type_Today {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.date_Today {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.name_Baptism {
+    font-style: italic;
+}
+
+.name_12_Yr_Adv, .name_14_Yr_Adv, .name_16_Yr_Adv {
+  font-style: italic;
+}
+
+.name_Today {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}

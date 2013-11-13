@@ -1,16 +1,17 @@
 <?php
-require 'h2o/h2o.php';
+require $_SERVER['DOCUMENT_ROOT'].'/inc/php/h2o/h2o.php';
 date_default_timezone_set('UTC');
 
-$template = new H2o('callings.tpl', array(
+$template = new H2o($_SERVER['DOCUMENT_ROOT'].'/inc/tpl/callings.tpl', array(
     'cache_dir' => dirname(__FILE__)
 ));
+$dataDir = $_SERVER['DOCUMENT_ROOT']."/data";
 
 $csv = array();
 $display = array();
 $display['organizations'] = array();
 
-if (($handle = fopen("organization.csv", "r")) !== FALSE) {
+if (($handle = fopen($dataDir."/organization.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     array_push($csv, $data);
   }

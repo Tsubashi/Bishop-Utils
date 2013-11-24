@@ -15,7 +15,7 @@
 <body>
 <div id="wrapper">
   <div id="right">
-    {% block navlist %}
+    {% block right %}
     <ul id="navlist">
       <li><a href="#Bishopric">Bishopric</a></li>
       <li><a href="#HighPriests">High Priests</a></li>
@@ -23,7 +23,7 @@
     {% endblock %}
   </div>
   <div id="left">
-    {% block content %}
+    {% block left %}
     <a id="Organization"></a>
     <div class="orgDiv">
       <h1>Organization</h1>

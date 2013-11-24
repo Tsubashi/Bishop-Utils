@@ -3,7 +3,7 @@
 {% block extrahead %}
 <link href="/inc/css/radar.css" rel="stylesheet" type="text/css" />
 {% endblock %}
-{% block navlist %}
+{% block right %}
     <form method="GET" action="{{ depth.submit }}">
       <fieldset>
         <legend>Change Range (Months)</legend>
@@ -14,7 +14,7 @@
       </fieldset>
     </form>
 {% endblock %}
-{% block content %}
+{% block left %}
     <div id="list">
       <h1 id="radarTitle"><span id="radarLogo"></span>Bishop's Radar</h1>
       <ul>

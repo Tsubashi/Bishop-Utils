@@ -1,13 +1,13 @@
 {% extends 'default.tpl' %}
 {% block title %}Calling List{% endblock %}
-{% block navlist %}
+{% block right %}
     <ul id="navlist">
       {% for org in organizations %}
       <li><a href="#{{ org.name }}"></a></li>
       {% endfor %}
     </ul>
 {% endblock %}
-{% block content %}
+{% block left %}
   {% for org in organizations %}
     <a id="{{ org.name }}"></a>
     <div class="orgDiv">

@@ -10,6 +10,8 @@
         <label>Future:</label><input type="text" name="depth" value="{{ depth.future }}" />
         <label>Past:</label><input type="text" name="past_depth" value="{{ depth.past }}" />
         <br />
+        <label>Show Bishopric? <label><input type="checkbox" name="bishopric" value="true" {{ depth.bishopricChecked }} />
+        <br />
         <input type="submit" value="GO!" />
       </fieldset>
     </form>

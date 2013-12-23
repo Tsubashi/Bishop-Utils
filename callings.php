@@ -70,7 +70,7 @@ foreach ($callings as $item) {
   array_push($display['organizations'], $currentOrg);
 }
 ##############################################################
-# Sort according to date
+# Sort according to calling name
 foreach ($display['organizations'] as &$array) {
   usort($array["callings"], "cmp");
 }

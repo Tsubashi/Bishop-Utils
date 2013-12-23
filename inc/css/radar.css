@@ -6,7 +6,7 @@
 }
 
 #radarLogo {
-  background: url("/inc/img/radar_small.png");
+  background: url("-inc-img-radar_small.png");
   width: 60px;
   height: 64px;
   float: left;
@@ -36,7 +36,7 @@
 }
 
 .itemName {
-  
+  font-style: italic;
 }
 
 .type_Baptism {
@@ -47,9 +47,17 @@
   color: orange;
 }
 
+.type_9_Yr_Inv, .type_10_Yr_Inv, .type_11_Yr_Inv, .type_13_Yr_Inv, .type_15_Yr_Inv, .type_16_Yr_Inv {
+  color: green;
+}
+
+.type_9_1-2_Yr_Inv, .type_10_1-2_Yr_Inv, .type_11_1-2_Yr_Inv, .type_12_1-2_Yr_Inv, .type_13_1-2_Yr_Inv, .type_14_1-2_Yr_Inv, .type_15_1-2_Yr_Inv {
+  color: purple;  
+}
+
 .type_Month {
   border-top: 1px dashed #999;
-  color: grey;
+  color: gray;
 }
 
 .type_Today {
@@ -66,11 +74,11 @@
     font-style: italic;
 }
 
-.name_12_Yr_Adv, .name_14_Yr_Adv, .name_16_Yr_Adv {
-  font-style: italic;
-}
-
 .name_Today {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+}
+
+.name_Report {
+  font-style: normal;
 }

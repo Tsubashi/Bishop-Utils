@@ -24,6 +24,7 @@ $display['depth'] = array();
 $display['depth']['future'] = $months_forward;
 $display['depth']['past']   = $months_backward;
 $display['depth']['submit'] = $_SERVER['PHP_SELF'];
+$display['depth']['bishopricChecked'] = isset($_REQUEST['bishopric']) ? 'checked' : '';
 $display['title'] ="Bishop's Radar (+$months_forward/-$months_backward)";
 
 # Read in Data
@@ -115,19 +116,36 @@ array_push($display["items"],array(
 ##############################################################
 # Age Based Items
 foreach($members as $member) {
-  $advancementTimes = array(
-      "Baptism"     => strtotime("+8 Years",strtotime($member["Birth"]))
-    , "12 Yr. Adv." => strtotime("+12 Years",strtotime($member["Birth"]))
-    , "14 Yr. Adv." => strtotime("+14 Years",strtotime($member["Birth"]))
-    , "16 Yr. Adv." => strtotime("+16 Years",strtotime($member["Birth"]))
+  $ageItems = array(
+      "Baptism"       => strtotime("+8 Years",strtotime($member["Birth"]))
+    , "9 Yr. Inv."    => strtotime("+9 Years",strtotime($member["Birth"]))
+    , "10 Yr. Inv."   => strtotime("+10 Years",strtotime($member["Birth"]))
+    , "11 Yr. Inv."   => strtotime("+11 Years",strtotime($member["Birth"]))
+    , "12 Yr. Adv."   => strtotime("+12 Years",strtotime($member["Birth"]))
+    , "13 Yr. Inv."   => strtotime("+13 Years",strtotime($member["Birth"]))
+    , "14 Yr. Adv."   => strtotime("+14 Years",strtotime($member["Birth"]))
+    , "15 Yr. Inv."   => strtotime("+15 Years",strtotime($member["Birth"]))
+    , "16 Yr. Adv."   => strtotime("+16 Years",strtotime($member["Birth"]))
+    , "16 Yr. Inv."   => strtotime("+6 Months",strtotime("+16 Years",strtotime($member["Birth"])))
     );
-  foreach($advancementTimes as $type => $time) {
+  if($_REQUEST['bishopric'] == "true") {
+    $ageItems = array_merge($ageItems, array(
+       "9 1/2 Yr. Inv."   => strtotime("+6 Months",strtotime("+9 Years",strtotime($member["Birth"])))
+     , "10 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+10 Years",strtotime($member["Birth"])))
+     , "11 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+11 Years",strtotime($member["Birth"])))
+     , "12 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+12 Years",strtotime($member["Birth"])))
+     , "13 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+13 Years",strtotime($member["Birth"])))
+     , "14 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+14 Years",strtotime($member["Birth"])))
+     , "15 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+15 Years",strtotime($member["Birth"])))
+    ));
+  }
+  foreach($ageItems as $type => $time) {
     if (isOnRadar($time)) {
       array_push($display["items"],array(
           "date"  => $time
         , "name"  => $member["Preferred Name"]
         , "type"  => $type
-        , "class" => str_replace(".", "", str_replace(" ", "_", $type))
+        , "class" => str_replace(array("."," ","/"), array("","_","-"), $type)
         ));
     }
   }

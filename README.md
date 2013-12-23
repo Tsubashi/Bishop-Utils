@@ -25,3 +25,5 @@ The report displays a list of recent and upcoming items, colored according to th
 - <span style="color: blue">Blue</span> = Baptism
 - <span style="color: grey">Grey</span> = Notes
 - <span style="color: black">Black</span> = Reports
+- <span style="color: black">Green</span> = Bishop's Interviews
+- <span style="color: black">Purple</span> = Counselor Interviews

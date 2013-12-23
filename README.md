@@ -6,6 +6,10 @@ Overview
 --------
 These PHP utilities are written to use the csv data that can be exported from MLS by admin users. MLS output files should be placed in the data folder. Script output is always HTML. Due to the sensitive nature of this data, be sure to secure these pages with adequate authentication measures. 
 
+Setup
+-----
+Setup is fairly straight-forward. create a folder in the same directory as the scripts called 'data.' Place the MLS csv exports for organizations and membership in it, and name them organization.csv and Membership.csv, respectfully.
+
 Calling Visualizer
 ------------------
 The Calling Visualizer lists all callings grouped by organization. Callings are displayed as boxes, and are colored according to the length of time a calling has been filled.

@@ -11,7 +11,7 @@ $csv = array();
 $display = array();
 $display['organizations'] = array();
 
-if (($handle = fopen($dataDir."/organization.csv", "r")) !== FALSE) {
+if (($handle = fopen($dataDir."/Organization.csv", "r")) !== FALSE) {
   while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
     array_push($csv, $data);
   }

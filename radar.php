@@ -118,9 +118,6 @@ array_push($display["items"],array(
 foreach($members as $member) {
   $ageItems = array(
       "Baptism"       => strtotime("+8 Years",strtotime($member["Birth"]))
-    , "9 Yr. Inv."    => strtotime("+9 Years",strtotime($member["Birth"]))
-    , "10 Yr. Inv."   => strtotime("+10 Years",strtotime($member["Birth"]))
-    , "11 Yr. Inv."   => strtotime("+11 Years",strtotime($member["Birth"]))
     , "12 Yr. Adv."   => strtotime("+12 Years",strtotime($member["Birth"]))
     , "13 Yr. Inv."   => strtotime("+13 Years",strtotime($member["Birth"]))
     , "14 Yr. Adv."   => strtotime("+14 Years",strtotime($member["Birth"]))
@@ -130,10 +127,7 @@ foreach($members as $member) {
     );
   if($_REQUEST['bishopric'] == "true") {
     $ageItems = array_merge($ageItems, array(
-       "9 1/2 Yr. Inv."   => strtotime("+6 Months",strtotime("+9 Years",strtotime($member["Birth"])))
-     , "10 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+10 Years",strtotime($member["Birth"])))
-     , "11 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+11 Years",strtotime($member["Birth"])))
-     , "12 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+12 Years",strtotime($member["Birth"])))
+       "12 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+12 Years",strtotime($member["Birth"])))
      , "13 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+13 Years",strtotime($member["Birth"])))
      , "14 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+14 Years",strtotime($member["Birth"])))
      , "15 1/2 Yr. Inv."  => strtotime("+6 Months",strtotime("+15 Years",strtotime($member["Birth"])))
